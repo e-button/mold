@@ -1,0 +1,66 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<form style="width: 50%; margin: auto; margin-top: 2%">
+  <div class="form-group">
+    <label for="staff_id">員工編號：</label>
+    <select class="form-control" id="staff_id">
+        <option class="drop-down" disabled>---請選擇---</option>
+          {% for staff in staffs %}
+              <option class="drop-down" value="{{ staff.id }}">{{ staff.name }}</option>
+          {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="machine_id">機台編號：</label>
+    <select class="form-control" id="machine_id">
+        <option class="drop-down" disabled>---請選擇---</option>
+          {% for machine in machines %}
+              <option class="drop-down" value="{{ machine.id }}">{{ machine.no }}</option>
+          {% endfor %}
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="process_id">加工類型：</label>
+    <select class="form-control" id="process_id">
+        <option class="drop-down" disabled>---請選擇---</option>
+          {% for process in processes %}
+              <option class="drop-down" value="{{ process.id }}">{{ process.type }}</option>
+          {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+      <label for="process_id">模具類型：</label>
+      <input type="text" class="form-control" id="mod_no">
+  </div>
+  &emsp;<input class="btn btn-primary" type="button" id="submit" value="報工">
+   <input class="btn btn-primary" type="button" value="重新整理" onClick="history.go(0);">
+</form>
+<script>
+    $('#submit').click(()=>{
+        let staff_id = $('#staff_id').val()
+        let machine_id = $('#machine_id').val()
+        let process_id = $('#process_id').val()
+        let mod_no = $('#mod_no').val()
+
+        $.ajax({
+            url: '/submit',
+            type: 'post',
+            data: {
+                staff_id,
+                machine_id,
+                process_id,
+                mod_no
+            },
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    location.reload()
+                }
+            }
+        })
+    })
+</script>
+
+{% endblock %}

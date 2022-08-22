@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<form style="width: 50%; margin: auto; margin-top: 2%">
+  <div class="form-group">
+    <label>開工時間：</label>
+    <input type="text" class="form-control" value="{{ work.start_time }}" disabled>
+  </div>
+  {% if work.end_time %}
+      <div class="form-group">
+        <label>完工時間：</label>
+        <input type="text" class="form-control" value="{{ work.end_time }}" disabled>
+      </div>
+  {% endif %}
+  <div class="form-group">
+    <label>員工編號：</label>
+    <input type="text" class="form-control" value="{{ work.staff.name }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>機台編號：</label>
+    <input type="text" class="form-control" value="{{ work.machine.no }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>加工類型：</label>
+    <input type="text" class="form-control" value="{{ work.process.type }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>模具類型：</label>
+    <input type="text" class="form-control" value="{{ work.mod_no }}" disabled>
+  </div>
+    {% if work.status == 0 %}
+  &emsp;<input class="btn btn-primary" type="button" id="submit" value="完工">
+    {% endif %}
+</form>
+
+    <script>
+    $('#submit').click(()=>{
+        $.ajax({
+            url: `/finish/{{ work.id }}`,
+            type: 'post',
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    self.location=document.referrer
+                }
+            }
+        })
+    })
+</script>
+
+{% endblock %}

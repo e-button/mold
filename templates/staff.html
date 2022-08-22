@@ -1,0 +1,91 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div style="width: 10%; margin-left: 0; margin-top: 2%"  class="form-group">
+        <label for="display">顯示：</label>
+        <select class="form-control" id="display">
+            <option class="drop-down" value="0" selected>未完工</option>
+            <option class="drop-down" value="1">已完工</option>
+            <option class="drop-down" value="2">所有報工</option>
+        </select>
+    </div>
+    <table style="width: 50%; margin: auto; margin-top: 2%" class="table">
+  <thead>
+    <tr>
+      <th scope="col">開工時間</th>
+      <th scope="col">完工時間</th>
+      <th scope="col">機台編號</th>
+      <th scope="col">加工類型</th>
+      <th scope="col">模具類型</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+    function selectMyWorks(status_type=0) {
+        $('tbody').empty()
+        $('#alert-text').remove()
+        $.ajax({
+        url: '#',
+        type: 'post',
+        success: (res)=>{
+            let code = res.code
+            if (code) {
+                let works = res.works
+                var html = ''
+                var status
+                works.forEach((item, index)=>{
+                    let work_id = item.id
+                    let start_time = item.start_time
+                    let end_time = item.end_time == 'None' ? '--------' : item.end_time
+                    let staff_name = item.staff_name
+                    let machine_no = item.machine_no
+                    let process_type = item.process_type
+                    let mod_no = item.mod_no
+                    status = item.status == '0' ? '未完工' : '已完工'
+                    if (status_type == 0 && status == '已完工')
+                        html += ''
+                    else if (status_type == 1 && status == '未完工')
+                        html += ''
+                    else {
+                        html += `
+                    <tr style="cursor: pointer" onclick="location.href='/work/${work_id}'">
+                      <td scope="row">${start_time}</td>
+                      <td>${end_time}</td>
+                      <td>${machine_no}</td>
+                      <td>${process_type}</td>
+                      <td>${mod_no}</td>
+                      <td>${status}</td>
+                    </tr>
+                    `
+                    }
+                })
+                if (html == '') {
+                    if (status_type == 0) {
+                        status_type = '未完工'
+                    }
+                    else if (status_type == 1) {
+                        status_type = '已完工'
+                    }
+                    else if (status_type == 2) {
+                        status_type = '所有報工'
+                    }
+                    $(`<label id="alert-text" style="text-align: center">系統沒有您的 ${status_type} 紀錄</label>`).insertAfter('tbody')
+                }
+                else{
+                    $('tbody').append(html)
+                }
+            }
+        }
+    })
+    }
+
+    $('#display').change(function () {
+        selectMyWorks(this.value)
+    })
+
+    selectMyWorks()
+</script>
+{% endblock %}
