@@ -1,0 +1,59 @@
+ version: "3"
+
+ volumes:
+  myproject_db_vol:
+  myproject_media_vol:
+
+ services:
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    environment:
+       - MYSQL_ROOT_PASSWORD=root
+       - MYSQL_DATABASE=yw
+       - MYSQL_USER=user
+       - MYSQL_PASSWORD=user
+    volumes:
+       - myproject_db_vol:/var/lib/mysql:rw
+       - ./mysql/conf/my.cnf:/etc/mysql/my.cnf
+       - ./mysql/init:/docker-entrypoint-initdb.d/
+#    ports:
+#       - "3306:3306"
+    restart: always
+
+  nginx:
+    build: ./nginx
+    ports:
+       - "8000:80"
+    expose:
+       - "80"
+    volumes:
+       - ./web/static:/usr/share/nginx/html/static
+       - ./nginx/ssl:/usr/share/nginx/ssl
+       - ./nginx/log:/var/log/nginx
+       - myproject_media_vol:/usr/share/nginx/html/media
+    links:
+       - web
+    depends_on:
+       - web
+    restart: always
+
+  web:
+    build: ./web
+    restart: always
+    entrypoint: /var/www/html/myproject/start.sh
+    command: uwsgi --ini uwsgi.ini
+    expose:
+      - "8888"
+    volumes:
+      - ./web:/var/www/html/myproject
+      - ./uwsgi:/tmp
+    links:
+      - db
+    depends_on:
+      - db
+    environment:
+      - DEBUG=False
+    tty: true
+    stdin_open: true

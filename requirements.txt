@@ -1,3 +1,0 @@
-Django==3.2.5
-PyMySQL==1.0.2
-pytz==2022.1

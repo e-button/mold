@@ -1,0 +1,128 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<form style="width: 50%; margin: auto; margin-top: 2%">
+  <div class="form-group">
+    <label>開工時間：</label>
+    <input type="text" class="form-control" value="{{ work.start_time }}" disabled>
+  </div>
+  {% if work.end_time %}
+      <div class="form-group">
+        <label>完工時間：</label>
+        <input type="text" class="form-control" value="{{ work.end_time }}" disabled>
+      </div>
+  {% endif %}
+    {% if work.times %}
+        {% for index, time in work.times %}
+            <div class="form-group">
+                <label>暫停時間{{ index|add:1 }}：</label>
+                <input type="text" class="form-control" value="{{ time.stop_time }}" disabled>
+            </div>
+            <div class="form-group">
+                <label>繼續時間{{ index|add:1 }}：</label>
+                <input type="text" class="form-control" value="{{ time.continue_time }}" disabled>
+          </div>
+        {% endfor %}
+    {% endif %}
+  <div class="form-group">
+    <label>員工編號：</label>
+    <input type="text" class="form-control" value="{{ work.staff.name }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>機台編號：</label>
+    <input type="text" class="form-control" value="{{ work.machine.no }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>加工類型：</label>
+    <input type="text" class="form-control" value="{{ work.process.type }}" disabled>
+  </div>
+  <div class="form-group">
+    <label>模具類型：</label>
+    <input type="text" class="form-control" value="{{ work.mod_no }}" disabled>
+  </div>
+    {% if work.status == 0 %}
+        <div style="display: inline-block" class="form-group">
+            <input class="btn btn-primary" type="button" id="stop" value="暫停">
+        </div>
+        <div style="display: inline-block" class="form-group">
+      &emsp;    <input class="btn btn-primary" type="button" id="submit" value="完工">
+        </div>
+        {% endif %}
+        {% if work.status == -1 %}
+        <div style="display: inline-block" class="form-group">
+            <input class="btn btn-primary" type="button" id="continue" value="繼續">
+        </div>
+        {% endif %}
+        <div style="display: inline-block; margin-left: 3%" class="form-group">
+            <input class="btn btn-danger" type="button" onclick="deleteMoldData('{{ work.id }}')" value="刪除">
+        </div>
+</form>
+
+
+    <script>
+    $('#submit').click(()=>{
+        $.ajax({
+            url: `/finish/{{ work.id }}`,
+            type: 'post',
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    self.location=document.referrer
+                }
+            }
+        })
+        })
+
+    $('#stop').click(()=>{
+        $.ajax({
+            url: `/stop/{{ work.id }}`,
+            type: 'post',
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    location.reload()
+                }
+            }
+        })
+    })
+
+    $('#continue').click(()=>{
+        $.ajax({
+            url: `/continue/{{ work.id }}`,
+            type: 'post',
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    location.reload()
+                }
+            }
+        })
+    })
+
+    function deleteMoldData(id) {
+        let flag = confirm('您確定要刪除這份報工？')
+        if (flag) {
+            $.ajax({
+                url: '/work/delete',
+                type: 'post',
+                data: { id },
+                success: (res)=>{
+                    let code = res.code
+                    let msg = res.msg
+                    alert(msg)
+                    if (code) {
+                        window.location.href = document.referrer
+                    }
+                }
+            })
+        }
+    }
+    </script>
+
+
+{% endblock %}

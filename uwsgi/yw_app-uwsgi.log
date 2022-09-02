@@ -1,0 +1,93 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:05 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:08 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:12 2022] ***
+compiled with version: 10.2.1 20210110 on 30 August 2022 10:42:45
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:16 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:22 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:32 2022] ***
+compiled with version: 10.2.1 20210110 on 30 August 2022 10:42:45
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:36 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:47:46 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:48:01 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:48:46 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 10:51:59 2022] ***
+compiled with version: 10.2.1 20210110 on 30 August 2022 10:50:31
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:01:12 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:01:19 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:01:54 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:02:00 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:02:38 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:02:44 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:02:47 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:04:50 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:04:53 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:04:57 2022] ***
+compiled with version: 10.2.1 20210110 on 30 August 2022 10:50:31
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:05:01 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:05:07 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:05:28 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:05:54 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:07:31 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 11:08:11 2022] ***
+compiled with version: 10.2.1 20210110 on 30 August 2022 11:06:16
+os: Linux-5.10.47-linuxkit #1 SMP PREEMPT Sat Jul 3 21:50:16 UTC 2021
+nodename: ab32447f3a43
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/myproject
+writing pidfile to /tmp/yw_app-master.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /var/www/html/myproject
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8888 fd 3
+setgid() to 33
+setuid() to 33
+Python version: 3.7.13 (default, Aug 23 2022, 10:38:17)  [GCC 10.2.1 20210110]
+Python main interpreter initialized at 0xaaab070727c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 403077 bytes (393 KB) for 2 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xaaab070727c0 pid: 33 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 33)
+spawned uWSGI worker 1 (pid: 34, cores: 1)
+Python auto-reloader enabled
+spawned uWSGI worker 2 (pid: 36, cores: 1)
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ueo7o8_2 because the default path (/root/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{address space usage: 518172672 bytes/494MB} {rss usage: 138514432 bytes/132MB} [pid: 36|app: 0|req: 1/1] 192.168.112.1 () {56 vars in 1541 bytes} [Tue Aug 30 19:08:19 2022] GET / => generated 0 bytes in 958 msecs (HTTP/1.1 302) 6 headers in 186 bytes (1 switches on core 0)
+{address space usage: 519249920 bytes/495MB} {rss usage: 140398592 bytes/133MB} [pid: 36|app: 0|req: 2/2] 192.168.112.1 () {56 vars in 1553 bytes} [Tue Aug 30 19:08:20 2022] GET /doWork => generated 7596 bytes in 49 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519512064 bytes/495MB} {rss usage: 140427264 bytes/133MB} [pid: 36|app: 0|req: 3/3] 192.168.112.1 () {58 vars in 1612 bytes} [Tue Aug 30 19:08:22 2022] GET /statistics => generated 0 bytes in 5 msecs (HTTP/1.1 301) 5 headers in 180 bytes (1 switches on core 0)
+{address space usage: 519512064 bytes/495MB} {rss usage: 140525568 bytes/134MB} [pid: 36|app: 0|req: 4/4] 192.168.112.1 () {58 vars in 1614 bytes} [Tue Aug 30 19:08:22 2022] GET /statistics/ => generated 4898 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519512064 bytes/495MB} {rss usage: 140525568 bytes/134MB} [pid: 36|app: 0|req: 5/5] 192.168.112.1 () {58 vars in 1613 bytes} [Tue Aug 30 19:08:23 2022] GET /allWorks => generated 5196 bytes in 49 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-2gij4mu_ because the default path (/root/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{address space usage: 518402048 bytes/494MB} {rss usage: 137797632 bytes/131MB} [pid: 34|app: 0|req: 1/6] 192.168.112.1 () {58 vars in 1608 bytes} [Tue Aug 30 19:08:24 2022] GET /staff/1 => generated 7267 bytes in 897 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519319552 bytes/495MB} {rss usage: 139395072 bytes/132MB} [pid: 34|app: 0|req: 2/7] 192.168.112.1 () {60 vars in 1509 bytes} [Tue Aug 30 19:08:25 2022] POST /staff/1 => generated 1294 bytes in 53 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+{address space usage: 519319552 bytes/495MB} {rss usage: 139395072 bytes/132MB} [pid: 34|app: 0|req: 3/8] 192.168.112.1 () {58 vars in 1615 bytes} [Tue Aug 30 19:08:29 2022] GET /statistics/ => generated 4898 bytes in 37 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519512064 bytes/495MB} {rss usage: 139427840 bytes/132MB} [pid: 36|app: 0|req: 6/9] 192.168.112.1 () {58 vars in 1613 bytes} [Tue Aug 30 19:08:29 2022] GET /allWorks => generated 5196 bytes in 47 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519593984 bytes/495MB} {rss usage: 139628544 bytes/133MB} [pid: 34|app: 0|req: 4/10] 192.168.112.1 () {58 vars in 1606 bytes} [Tue Aug 30 19:08:30 2022] GET /doWork => generated 7596 bytes in 35 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139628544 bytes/133MB} [pid: 34|app: 0|req: 5/11] 192.168.112.1 () {58 vars in 1608 bytes} [Tue Aug 30 19:08:30 2022] GET /allWorks => generated 5196 bytes in 48 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139702272 bytes/133MB} [pid: 34|app: 0|req: 6/12] 192.168.112.1 () {58 vars in 1616 bytes} [Tue Aug 30 19:09:30 2022] GET /allWorks => generated 5196 bytes in 72 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 7/13] 192.168.112.1 () {56 vars in 1541 bytes} [Tue Aug 30 19:19:40 2022] GET / => generated 0 bytes in 18 msecs (HTTP/1.1 302) 6 headers in 186 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 8/14] 192.168.112.1 () {56 vars in 1553 bytes} [Tue Aug 30 19:19:40 2022] GET /doWork => generated 7596 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 9/15] 192.168.112.1 () {58 vars in 1614 bytes} [Tue Aug 30 19:19:42 2022] GET /statistics/ => generated 4898 bytes in 31 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 10/16] 192.168.112.1 () {58 vars in 1613 bytes} [Tue Aug 30 19:19:42 2022] GET /allWorks => generated 5196 bytes in 55 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519512064 bytes/495MB} {rss usage: 139444224 bytes/132MB} [pid: 36|app: 0|req: 7/17] 192.168.112.1 () {58 vars in 1608 bytes} [Tue Aug 30 19:19:44 2022] GET /staff/2 => generated 7267 bytes in 31 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519774208 bytes/495MB} {rss usage: 139571200 bytes/133MB} [pid: 36|app: 0|req: 8/18] 192.168.112.1 () {60 vars in 1509 bytes} [Tue Aug 30 19:19:44 2022] POST /staff/2 => generated 487 bytes in 50 msecs (HTTP/1.1 200) 5 headers in 158 bytes (1 switches on core 0)
+{address space usage: 519774208 bytes/495MB} {rss usage: 139571200 bytes/133MB} [pid: 36|app: 0|req: 9/19] 192.168.112.1 () {58 vars in 1615 bytes} [Tue Aug 30 19:19:45 2022] GET /statistics/ => generated 4898 bytes in 25 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 11/20] 192.168.112.1 () {58 vars in 1613 bytes} [Tue Aug 30 19:19:46 2022] GET /allWorks => generated 5196 bytes in 48 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519856128 bytes/495MB} {rss usage: 139767808 bytes/133MB} [pid: 34|app: 0|req: 12/21] 192.168.112.1 () {58 vars in 1608 bytes} [Tue Aug 30 19:19:47 2022] GET /staff/4 => generated 7267 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519774208 bytes/495MB} {rss usage: 139571200 bytes/133MB} [pid: 36|app: 0|req: 10/22] 192.168.112.1 () {60 vars in 1509 bytes} [Tue Aug 30 19:19:47 2022] POST /staff/4 => generated 59 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 157 bytes (1 switches on core 0)
+{address space usage: 519774208 bytes/495MB} {rss usage: 139616256 bytes/133MB} [pid: 36|app: 0|req: 11/23] 192.168.112.1 () {58 vars in 1605 bytes} [Tue Aug 30 19:19:49 2022] GET /doWork => generated 7596 bytes in 34 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+{address space usage: 519774208 bytes/495MB} {rss usage: 139616256 bytes/133MB} [pid: 36|app: 0|req: 12/24] 192.168.112.1 () {58 vars in 1608 bytes} [Tue Aug 30 19:20:29 2022] GET /allWorks => generated 5196 bytes in 44 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 20:54:04 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 20:54:07 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 20:54:13 2022] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Aug 30 20:54:17 2022] ***
