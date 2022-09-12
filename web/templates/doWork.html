@@ -4,7 +4,7 @@
   <div class="form-group">
     <label for="staff_id">員工編號：</label>
     <select class="form-control" id="staff_id">
-        <option class="drop-down" disabled>---請選擇---</option>
+        <option class="drop-down" hidden>---請選擇---</option>
           {% for staff in staffs %}
               <option class="drop-down" value="{{ staff.id }}">{{ staff.name }}</option>
           {% endfor %}
@@ -13,7 +13,7 @@
   <div class="form-group">
     <label for="machine_id">機台編號：</label>
     <select class="form-control" id="machine_id">
-        <option class="drop-down" disabled>---請選擇---</option>
+        <option class="drop-down" selected disabled>---請選擇---</option>
           {% for machine in machines %}
               <option class="drop-down" value="{{ machine.id }}">{{ machine.no }}</option>
           {% endfor %}
@@ -22,14 +22,14 @@
   <div class="form-group">
     <label for="process_id">加工類型：</label>
     <select class="form-control" id="process_id">
-        <option class="drop-down" disabled>---請選擇---</option>
+        <option class="drop-down" selected disabled>---請選擇---</option>
           {% for process in processes %}
               <option class="drop-down" value="{{ process.id }}">{{ process.type }}</option>
           {% endfor %}
     </select>
   </div>
   <div class="form-group">
-      <label for="process_id">模具類型：</label>
+      <label for="process_id">模具編號：</label>
       <input type="text" class="form-control" id="mod_no">
   </div>
   &emsp;<input class="btn btn-primary" type="button" id="submit" value="報工">

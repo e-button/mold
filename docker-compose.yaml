@@ -8,7 +8,7 @@
 
   db:
     image: mysql:5.7
-    platform: linux/amd64
+    # platform: linux/amd64
     environment:
        - MYSQL_ROOT_PASSWORD=root
        - MYSQL_DATABASE=yw
@@ -18,8 +18,8 @@
        - myproject_db_vol:/var/lib/mysql:rw
        - ./mysql/conf/my.cnf:/etc/mysql/my.cnf
        - ./mysql/init:/docker-entrypoint-initdb.d/
-#    ports:
-#       - "3306:3306"
+    # ports:
+    #   - "8888:3306"
     restart: always
 
   nginx:
@@ -42,8 +42,8 @@
   web:
     build: ./web
     restart: always
-    entrypoint: /var/www/html/myproject/start.sh
-    command: uwsgi --ini uwsgi.ini
+    # entrypoint: /var/www/html/myproject/start.sh
+    # command: uwsgi --ini uwsgi.ini
     expose:
       - "8888"
     volumes:
@@ -57,3 +57,12 @@
       - DEBUG=False
     tty: true
     stdin_open: true
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8888:80"
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306

@@ -1,0 +1,1141 @@
+Reed@DESKTOP-GDOC3R8 MINGW64 ~
+$ git clone https://github.com/whplsweb/yw_app.git
+Cloning into 'yw_app'...
+remote: Enumerating objects: 359, done.
+remote: Counting objects: 100% (359/359), done.
+remote: Compressing objects: 100% (258/258), done.
+remote: Total 359 (delta 98), reused 348 (delta 87), pack-reused 0
+Receiving objects: 100% (359/359), 1.12 MiB | 2.33 MiB/s, done.
+Resolving deltas: 100% (98/98), done.
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~
+$ cd yw_app
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose build
+db uses an image, skipping
+Building web
+#1 [internal] load build definition from Dockerfile
+#1 sha256:9c3a9ab2a11c8a9eb64d6301b8239f4953df38a2ec170379d0b65afee5b00063
+#1 transferring dockerfile: 312B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 sha256:82a5d6e5267affa8fc764c29c420d5a7f9710aee022c820b53215ff16a9f3069
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 sha256:0d08e89a67671675c4ae92ebaf51c7322ccd2be3283e7c3a64a588fe494e76cc
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 DONE 4.1s
+
+#5 [1/7] FROM docker.io/library/python:3.7@sha256:8b743b1af852e554b98e2377f9c92221693225b85d984b23be6b033018f97cc3
+#5 sha256:bc5bbe979f8a6e30b178bd3137a5ecbd21d601f9db08428124a7abf5b439a422
+#5 resolve docker.io/library/python:3.7@sha256:8b743b1af852e554b98e2377f9c92221693225b85d984b23be6b033018f97cc3 done
+#5 sha256:f97db05f776aa72b282ec03ef2f0d7bd02e50f3fc22a15e4bed2c380484d37c7 9.20kB / 9.20kB done
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 0B / 10.88MB 0.2s
+#5 sha256:8b743b1af852e554b98e2377f9c92221693225b85d984b23be6b033018f97cc3 1.86kB / 1.86kB done
+#5 sha256:5166b2e45eb49a54550b15756859deb1e145bbbad4d88baf18ed006f99b820bd 2.22kB / 2.22kB done
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 0B / 55.01MB 0.2s
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 0B / 5.16MB 0.2s
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 1.05MB / 5.16MB 0.6s
+#5 ...
+
+#8 [internal] load build context
+#8 sha256:2221f7662df4094491a6d8c8ffb7dc65a904f2786c534d675fc8aaac2fff8853
+#8 transferring context: 2.09MB 0.7s done
+#8 DONE 0.7s
+
+#5 [1/7] FROM docker.io/library/python:3.7@sha256:8b743b1af852e554b98e2377f9c92221693225b85d984b23be6b033018f97cc3
+#5 sha256:bc5bbe979f8a6e30b178bd3137a5ecbd21d601f9db08428124a7abf5b439a422
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 2.10MB / 5.16MB 0.7s
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 3.15MB / 5.16MB 0.8s
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 4.19MB / 5.16MB 0.9s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 0B / 54.58MB 1.0s
+#5 sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 5.16MB / 5.16MB 0.9s done
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 4.19MB / 55.01MB 1.5s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 1.05MB / 10.88MB 1.8s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 8.39MB / 55.01MB 1.8s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 11.53MB / 55.01MB 2.0s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 2.10MB / 10.88MB 2.1s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 3.15MB / 10.88MB 2.3s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 14.68MB / 55.01MB 2.3s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 4.19MB / 10.88MB 2.5s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 5.24MB / 10.88MB 2.7s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 18.87MB / 55.01MB 2.7s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 6.29MB / 10.88MB 2.9s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 23.07MB / 55.01MB 3.1s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 7.34MB / 10.88MB 3.2s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 8.39MB / 10.88MB 3.4s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 26.21MB / 55.01MB 3.4s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 3.15MB / 54.58MB 3.4s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 9.44MB / 10.88MB 3.6s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 29.36MB / 55.01MB 3.6s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 10.49MB / 10.88MB 3.9s
+#5 sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 10.88MB / 10.88MB 3.9s done
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 34.60MB / 55.01MB 4.1s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 0B / 196.79MB 4.1s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 38.80MB / 55.01MB 4.5s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 41.94MB / 55.01MB 4.9s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 45.09MB / 55.01MB 5.4s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 6.29MB / 54.58MB 5.4s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 48.23MB / 55.01MB 5.9s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 52.10MB / 55.01MB 6.2s
+#5 sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 55.01MB / 55.01MB 6.4s done
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 0B / 6.29MB 6.5s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 11.53MB / 196.79MB 6.8s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 9.44MB / 54.58MB 6.9s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 1.05MB / 6.29MB 7.0s
+#5 extracting sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 0.1s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 2.10MB / 6.29MB 7.1s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 3.15MB / 6.29MB 7.2s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 4.19MB / 6.29MB 7.4s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 5.24MB / 6.29MB 7.5s
+#5 sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 6.29MB / 6.29MB 7.6s done
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 0B / 15.48MB 7.7s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 12.58MB / 54.58MB 8.0s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 1.05MB / 15.48MB 8.2s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 22.02MB / 196.79MB 8.4s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 2.10MB / 15.48MB 8.4s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 3.15MB / 15.48MB 8.6s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 4.19MB / 15.48MB 8.7s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 5.24MB / 15.48MB 9.0s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 15.73MB / 54.58MB 9.1s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 6.29MB / 15.48MB 9.1s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 7.34MB / 15.48MB 9.2s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 8.39MB / 15.48MB 9.4s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 9.44MB / 15.48MB 9.6s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 18.87MB / 54.58MB 9.9s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 11.53MB / 15.48MB 9.9s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 32.51MB / 196.79MB 10.1s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 12.58MB / 15.48MB 10.1s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 14.68MB / 15.48MB 10.3s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 15.48MB / 15.48MB 10.4s
+#5 sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 15.48MB / 15.48MB 10.4s done
+#5 sha256:4c44fb36b5a869a4ce0d42a418e5f521a6aaf6e4387774fcd6d2770a1cf5c063 0B / 233B 10.5s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 22.02MB / 54.58MB 10.6s
+#5 sha256:4c44fb36b5a869a4ce0d42a418e5f521a6aaf6e4387774fcd6d2770a1cf5c063 233B / 233B 10.8s done
+#5 sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c 0B / 2.89MB 10.9s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 42.99MB / 196.79MB 11.0s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 25.17MB / 54.58MB 11.2s
+#5 extracting sha256:1671565cc8df8c365c9b661d3fbc164e73d01f1b0430c6179588428f99a9da2e 4.2s done
+#5 extracting sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 0.1s
+#5 sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c 1.05MB / 2.89MB 11.5s
+#5 sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c 2.10MB / 2.89MB 11.6s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 53.48MB / 196.79MB 11.8s
+#5 sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c 2.89MB / 2.89MB 11.7s done
+#5 extracting sha256:3e94d13e55e7a4ef17ff21376f57fb95c7e1706931f8704aa99260968d81f6e4 0.4s done
+#5 extracting sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 0.1s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 28.31MB / 54.58MB 12.3s
+#5 extracting sha256:fa9c7528c685216129e8e67bf362a7702e7b1daa585ab85546a41508830657d6 0.4s done
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 65.01MB / 196.79MB 12.5s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 76.55MB / 196.79MB 13.2s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 89.13MB / 196.79MB 13.8s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 100.66MB / 196.79MB 14.5s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 116.39MB / 196.79MB 15.1s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 130.02MB / 196.79MB 15.7s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 140.51MB / 196.79MB 16.2s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 154.14MB / 196.79MB 16.8s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 164.63MB / 196.79MB 17.2s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 28.31MB / 54.58MB 17.3s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 176.16MB / 196.79MB 17.6s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 186.65MB / 196.79MB 18.0s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 31.46MB / 54.58MB 18.3s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 34.60MB / 54.58MB 18.8s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 196.79MB / 196.79MB 18.8s
+#5 sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 196.79MB / 196.79MB 18.8s done
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 37.75MB / 54.58MB 19.3s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 40.89MB / 54.58MB 19.7s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 44.04MB / 54.58MB 20.0s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 47.19MB / 54.58MB 20.3s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 50.33MB / 54.58MB 20.9s
+#5 sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 54.58MB / 54.58MB 21.2s done
+#5 extracting sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a
+#5 extracting sha256:53ad072f9cd16fc8eb93b182b20e758e11acc0ef60babef0bf1043c08de1901a 2.4s done
+#5 extracting sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 0.1s
+#5 extracting sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 5.1s
+#5 extracting sha256:d6b983117533b718374f1701ef593dd2afa6613c7908c6553be8e2a150e6448a 7.5s done
+#5 extracting sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 0.1s
+#5 extracting sha256:d8092d56ded5476fe7c302256eb4dc6ff495ae8fb4dd28aa18dbcb7581e24a6c 0.4s done
+#5 extracting sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09
+#5 extracting sha256:43a9f01be0089801cebca0fdf06db6212b7e95f81a196eb18a0188355d91bd09 0.8s done
+#5 extracting sha256:4c44fb36b5a869a4ce0d42a418e5f521a6aaf6e4387774fcd6d2770a1cf5c063 done
+#5 extracting sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c
+#5 extracting sha256:8b9de5c6c1b435603bfd97c4df0aa555f6de2df93d21886fc6d80e3e01bf5d4c 0.2s done
+#5 DONE 33.3s
+
+#6 [2/7] RUN mkdir -p /var/www/html/myproject
+#6 sha256:6b909ac625ab2189b22b598b871abfe76912566ba34d63ed845084116ee05be2
+#6 DONE 1.2s
+
+#7 [3/7] WORKDIR /var/www/html/myproject
+#7 sha256:e5a5178fda98817fb45b23a438eb6f83dc3337e4450fbd13b352a87c86fd5221
+#7 DONE 0.1s
+
+#9 [4/7] ADD . /var/www/html/myproject
+#9 sha256:0f6f56c194729479799c8d29dfd564d667281d8403ed74bd935f48436830480f
+#9 DONE 0.1s
+
+#10 [5/7] RUN /usr/local/bin/python -m pip install --upgrade pip
+#10 sha256:fdac141eaaed294a0b4b54df8d99a7d2d392f955b4212afd001080366022b153
+#10 2.403 Requirement already satisfied: pip in /usr/local/lib/python3.7/site-packages (22.0.4)
+#10 2.836 Collecting pip
+#10 3.292   Downloading pip-22.2.2-py3-none-any.whl (2.0 MB)
+#10 3.897      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 3.4 MB/s eta 0:00:00
+#10 3.940 Installing collected packages: pip
+#10 3.941   Attempting uninstall: pip
+#10 3.941     Found existing installation: pip 22.0.4
+#10 4.062     Uninstalling pip-22.0.4:
+#10 4.294       Successfully uninstalled pip-22.0.4
+#10 5.353 Successfully installed pip-22.2.2
+#10 5.354 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 5.9s
+
+#11 [6/7] RUN pip install -r requirements.txt
+#11 sha256:16947225e002e6389e275b434444dc31a9af880fddbec9bb100504636f46c42a
+#11 1.408 Collecting Django==3.2.5
+#11 1.768   Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
+#11 2.569      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 9.9 MB/s eta 0:00:00
+#11 2.973 Collecting matplotlib==3.5.1
+#11 3.053   Downloading matplotlib-3.5.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.2 MB)
+#11 3.533      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.2/11.2 MB 24.6 MB/s eta 0:00:00
+#11 3.849 Collecting pandas==1.3.5
+#11 3.979   Downloading pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+#11 4.533      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 21.1 MB/s eta 0:00:00
+#11 5.021 Collecting Pillow==9.2.0
+#11 5.135   Downloading Pillow-9.2.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.2 MB)
+#11 5.300      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 20.0 MB/s eta 0:00:00
+#11 5.445 Collecting PyMySQL==1.0.2
+#11 5.539   Downloading PyMySQL-1.0.2-py3-none-any.whl (43 kB)
+#11 5.552      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 3.7 MB/s eta 0:00:00
+#11 5.745 Collecting pytz==2022.1
+#11 5.837   Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+#11 5.883      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 12.3 MB/s eta 0:00:00
+#11 6.014 Collecting seaborn==0.11.2
+#11 6.112   Downloading seaborn-0.11.2-py3-none-any.whl (292 kB)
+#11 6.146      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 292.8/292.8 kB 9.1 MB/s eta 0:00:00
+#11 6.316 Collecting XlsxWriter==3.0.3
+#11 6.426   Downloading XlsxWriter-3.0.3-py3-none-any.whl (149 kB)
+#11 6.453      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.0/150.0 kB 6.9 MB/s eta 0:00:00
+#11 6.581 Collecting uwsgi==2.0.18
+#11 6.683   Downloading uwsgi-2.0.18.tar.gz (801 kB)
+#11 6.772      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 9.2 MB/s eta 0:00:00
+#11 6.962   Preparing metadata (setup.py): started
+#11 7.398   Preparing metadata (setup.py): finished with status 'done'
+#11 7.601 Collecting openpyxl==3.0.10
+#11 7.786   Downloading openpyxl-3.0.10-py2.py3-none-any.whl (242 kB)
+#11 7.809      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.1/242.1 kB 12.7 MB/s eta 0:00:00
+#11 7.958 Collecting asgiref<4,>=3.3.2
+#11 8.035   Downloading asgiref-3.5.2-py3-none-any.whl (22 kB)
+#11 8.170 Collecting sqlparse>=0.2.2
+#11 8.266   Downloading sqlparse-0.4.2-py3-none-any.whl (42 kB)
+#11 8.277      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 4.0 MB/s eta 0:00:00
+#11 8.477 Collecting kiwisolver>=1.0.1
+#11 8.598   Downloading kiwisolver-1.4.4-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.1 MB)
+#11 8.679      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 14.6 MB/s eta 0:00:00
+#11 8.809 Collecting cycler>=0.10
+#11 8.896   Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+#11 9.064 Collecting pyparsing>=2.2.1
+#11 9.146   Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+#11 9.158      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 10.3 MB/s eta 0:00:00
+#11 9.291 Collecting python-dateutil>=2.7
+#11 9.395   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#11 9.413      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 16.8 MB/s eta 0:00:00
+#11 9.548 Collecting packaging>=20.0
+#11 9.637   Downloading packaging-21.3-py3-none-any.whl (40 kB)
+#11 9.649      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 3.8 MB/s eta 0:00:00
+#11 9.862 Collecting fonttools>=4.22.0
+#11 9.945   Downloading fonttools-4.37.1-py3-none-any.whl (957 kB)
+#11 10.01      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 957.2/957.2 kB 16.9 MB/s eta 0:00:00
+#11 10.46 Collecting numpy>=1.17
+#11 10.56   Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+#11 11.27      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 24.3 MB/s eta 0:00:00
+#11 11.66 Collecting scipy>=1.0
+#11 11.75   Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+#11 13.10      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.1/38.1 MB 21.7 MB/s eta 0:00:00
+#11 13.29 Collecting et-xmlfile
+#11 13.39   Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+#11 13.59 Collecting typing-extensions
+#11 13.69   Downloading typing_extensions-4.3.0-py3-none-any.whl (25 kB)
+#11 13.90 Collecting six>=1.5
+#11 13.98   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#11 14.04 Building wheels for collected packages: uwsgi
+#11 14.04   Building wheel for uwsgi (setup.py): started
+#11 20.25   Building wheel for uwsgi (setup.py): finished with status 'done'
+#11 20.25   Created wheel for uwsgi: filename=uWSGI-2.0.18-cp37-cp37m-linux_x86_64.whl size=585206 sha256=cd6d00f9fae9bd59a30dd084cf99e9fdc62dbec7d146dcd1f167b69168ddc27e
+#11 20.25   Stored in directory: /root/.cache/pip/wheels/e7/d0/f2/b93905969980eaf9fe18183b0c43470d63b13fcd3a1f6c8efe
+#11 20.25 Successfully built uwsgi
+#11 20.50 Installing collected packages: uwsgi, pytz, XlsxWriter, typing-extensions, sqlparse, six, pyparsing, PyMySQL, Pillow, numpy, fonttools, et-xmlfile, cycler, scipy, python-dateutil, packaging, openpyxl, kiwisolver, asgiref, pandas, matplotlib, Django, seaborn
+#11 32.38 Successfully installed Django-3.2.5 Pillow-9.2.0 PyMySQL-1.0.2 XlsxWriter-3.0.3 asgiref-3.5.2 cycler-0.11.0 et-xmlfile-1.1.0 fonttools-4.37.1 kiwisolver-1.4.4 matplotlib-3.5.1 numpy-1.21.6 openpyxl-3.0.10 packaging-21.3 pandas-1.3.5 pyparsing-3.0.9 python-dateutil-2.8.2 pytz-2022.1 scipy-1.7.3 seaborn-0.11.2 six-1.16.0 sqlparse-0.4.2 typing-extensions-4.3.0 uwsgi-2.0.18
+#11 32.38 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 DONE 33.1s
+
+#12 [7/7] RUN chmod +x ./start.sh
+#12 sha256:7fa79a5879a7e7fbca6e7eac7632f64c98db387217b370db8a09191aff0efd44
+#12 DONE 0.6s
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers
+#13 exporting layers 3.1s done
+#13 writing image sha256:373d751982ceb32d0591ec58b8b81f5e0663bb4b22851e99d20821d17cfd3ca3
+#13 writing image sha256:373d751982ceb32d0591ec58b8b81f5e0663bb4b22851e99d20821d17cfd3ca3 done
+#13 naming to docker.io/library/yw_app_web done
+#13 DONE 3.1s
+Building nginx
+#1 [internal] load build definition from Dockerfile
+#1 sha256:af5381df244541e423e3c1876a0969bb1271cdcd4f1ed7ae2f7a95bcfd05927c
+#1 transferring dockerfile: 406B done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 sha256:7aa33fbcedd40b8f604009e546af13b80e0ba247f966380afa4325ef690d40ba
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:latest
+#3 sha256:06c466a4eb6821b81bd3e48610e5f38dab858b1e9acb01d6e2f6b11c8fabe6bc
+#3 ...
+
+#4 [auth] library/nginx:pull token for registry-1.docker.io
+#4 sha256:cbae92e26c7cbd5cac0a3bdaa91b71e7f8f9e0d88db0702300a3698b28f0a08c
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:latest
+#3 sha256:06c466a4eb6821b81bd3e48610e5f38dab858b1e9acb01d6e2f6b11c8fabe6bc
+#3 DONE 3.8s
+
+#8 [internal] load build context
+#8 sha256:82b8a14fc5c6d998b8876f4307bf22b096c683dcef75f552c41b36fee58b22d3
+#8 transferring context: 888B done
+#8 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/nginx:latest@sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f
+#5 sha256:dd5d068554df17a55961f4388b19821ec36c367c1e861860a267678135ddb6dd
+#5 resolve docker.io/library/nginx:latest@sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f 0.0s done
+#5 sha256:2b7d6430f78d432f89109b29d88d4c36c868cdbf15dc31d2132ceaa02b993763 7.65kB / 7.65kB done
+#5 sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f 1.86kB / 1.86kB done
+#5 sha256:89020cd33be2767f3f894484b8dd77bc2e5a1ccc864350b92c53262213257dfc 1.57kB / 1.57kB done
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 0B / 31.38MB 0.1s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 0B / 25.35MB 0.1s
+#5 sha256:d4019c921e20447eea3c9658bd0780a7e3771641bf29b85f222ec3f54c11a84f 0B / 602B 0.1s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 3.15MB / 31.38MB 0.9s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 5.24MB / 31.38MB 1.0s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 8.39MB / 31.38MB 1.2s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 10.49MB / 31.38MB 1.3s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 12.58MB / 31.38MB 1.6s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 16.78MB / 31.38MB 1.9s
+#5 sha256:d4019c921e20447eea3c9658bd0780a7e3771641bf29b85f222ec3f54c11a84f 602B / 602B 1.7s done
+#5 sha256:7cb804d746d48520f1c0322fcda93249b96b4ed0bbd7f9912b2eb21bd8da6b43 0B / 894B 1.9s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 19.92MB / 31.38MB 2.2s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 2.10MB / 25.35MB 2.2s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 23.07MB / 31.38MB 2.5s
+#5 sha256:7cb804d746d48520f1c0322fcda93249b96b4ed0bbd7f9912b2eb21bd8da6b43 894B / 894B 2.6s done
+#5 sha256:e7a561826262f279acf3a671b2d5684a86a8dbc48dc88e4cb65305ba4b08cae1 0B / 665B 2.6s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 27.26MB / 31.38MB 2.8s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 29.36MB / 31.38MB 3.1s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 31.38MB / 31.38MB 3.3s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 4.19MB / 25.35MB 3.3s
+#5 sha256:e7a561826262f279acf3a671b2d5684a86a8dbc48dc88e4cb65305ba4b08cae1 665B / 665B 3.2s done
+#5 sha256:7247f6e5c182559e2f7c010c11506802a0259958577a6e64c31b5b8f7cb0b286 0B / 1.39kB 3.3s
+#5 sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 31.38MB / 31.38MB 3.3s done
+#5 extracting sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d
+#5 sha256:7247f6e5c182559e2f7c010c11506802a0259958577a6e64c31b5b8f7cb0b286 1.39kB / 1.39kB 3.6s done
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 6.29MB / 25.35MB 4.2s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 8.39MB / 25.35MB 4.9s
+#5 extracting sha256:7a6db449b51b92eac5c81cdbd82917785343f1664b2be57b22337b0a40c5b29d 1.5s done
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 10.49MB / 25.35MB 5.4s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 12.58MB / 25.35MB 5.9s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 14.68MB / 25.35MB 6.2s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 16.78MB / 25.35MB 6.5s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 18.87MB / 25.35MB 6.8s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 20.97MB / 25.35MB 7.1s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 23.07MB / 25.35MB 7.3s
+#5 sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 25.35MB / 25.35MB 7.6s done
+#5 extracting sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da
+#5 extracting sha256:ca1981974b581a41cc58598a6b51580d317ac61590be75a8a63fa479e53890da 0.8s done
+#5 extracting sha256:d4019c921e20447eea3c9658bd0780a7e3771641bf29b85f222ec3f54c11a84f
+#5 extracting sha256:d4019c921e20447eea3c9658bd0780a7e3771641bf29b85f222ec3f54c11a84f done
+#5 extracting sha256:7cb804d746d48520f1c0322fcda93249b96b4ed0bbd7f9912b2eb21bd8da6b43 done
+#5 extracting sha256:e7a561826262f279acf3a671b2d5684a86a8dbc48dc88e4cb65305ba4b08cae1
+#5 extracting sha256:e7a561826262f279acf3a671b2d5684a86a8dbc48dc88e4cb65305ba4b08cae1 done
+#5 extracting sha256:7247f6e5c182559e2f7c010c11506802a0259958577a6e64c31b5b8f7cb0b286 done
+#5 DONE 8.9s
+
+#6 [2/4] RUN rm /etc/nginx/conf.d/default.conf && mkdir -p /usr/share/nginx/html/static && mkdir -p /usr/share/nginx/html/media && mkdir -p /usr/share/nginx/ssl
+#6 sha256:23dfcc0b23afdff926263576a4e6a6f204b1dac805f27f9c11d662de7b8f0d9e
+#6 DONE 0.6s
+
+#7 [3/4] RUN chown -R www-data:www-data /usr/share/nginx/html/media && chmod -R 775 /usr/share/nginx/html/media
+#7 sha256:890d397b163824ccf4a1b68b1f27718ccaab877cd408e2591f5ebdd958244859
+#7 DONE 0.6s
+
+#9 [4/4] ADD ./nginx.conf /etc/nginx/conf.d/
+#9 sha256:1c5617f843d6919397f6f72eba4951412cc47aa7b016abbbcc7fbdc316a370a6
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#10 exporting layers
+#10 exporting layers 0.1s done
+#10 writing image sha256:cf5fa4b527cfbdf344dc32a234a22d234cc284caad12dc87c137cad7ddd539cf done
+#10 naming to docker.io/library/yw_app_nginx done
+#10 DONE 0.1s
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ pwd
+/c/Users/Reed/yw_app
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ ^C
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose up
+Creating network "yw_app_default" with the default driver
+Creating volume "yw_app_myproject_db_vol" with default driver
+Creating volume "yw_app_myproject_media_vol" with default driver
+Pulling db (mysql:5.7)...
+5.7: Pulling from library/mysql
+Digest: sha256:c1bda6ecdbc63d3b0d3a3a3ce195de3dd755c4a0658ed782a16a0682216b9a48
+Status: Downloaded newer image for mysql:5.7
+Creating yw_app_db_1 ...
+Creating yw_app_db_1 ... done
+Creating yw_app_web_1 ...
+Creating yw_app_web_1 ... done
+Creating yw_app_nginx_1 ...
+Creating yw_app_nginx_1 ... done
+Attaching to yw_app_db_1, yw_app_web_1, yw_app_nginx_1
+db_1     | 2022-09-02 02:00:24+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+nginx_1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_1  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf is not a file or does not exist
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx_1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+db_1     | 2022-09-02 02:00:24+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db_1     | 2022-09-02 02:00:24+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+db_1     | 2022-09-02 02:00:24+00:00 [Note] [Entrypoint]: Initializing database files
+db_1     | mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:00:24.819189Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db_1     | 2022-09-02T02:00:25.028481Z 0 [Warning] InnoDB: New log files created, LSN=45790
+db_1     | 2022-09-02T02:00:25.070497Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.
+db_1     | 2022-09-02T02:00:25.081918Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 028601ad-2a63-11ed-9638-0242ac120002.
+db_1     | 2022-09-02T02:00:25.086016Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+db_1     | 2022-09-02T02:00:25.187919Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:25.187970Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:25.188455Z 0 [Warning] CA certificate ca.pem is self signed.
+db_1     | 2022-09-02T02:00:25.306259Z 1 [Warning] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+db_1     | 2022-09-02 02:00:28+00:00 [Note] [Entrypoint]: Database files initialized
+db_1     | 2022-09-02 02:00:28+00:00 [Note] [Entrypoint]: Starting temporary server
+db_1     | 2022-09-02 02:00:28+00:00 [Note] [Entrypoint]: Waiting for server startup
+db_1     | mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:00:28.292782Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db_1     | 2022-09-02T02:00:28.295100Z 0 [Note] mysqld (mysqld 5.7.39) starting as process 125 ...
+db_1     | 2022-09-02T02:00:28.298474Z 0 [Note] InnoDB: PUNCH HOLE support available
+db_1     | 2022-09-02T02:00:28.298562Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1     | 2022-09-02T02:00:28.298570Z 0 [Note] InnoDB: Uses event mutexes
+db_1     | 2022-09-02T02:00:28.298572Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+db_1     | 2022-09-02T02:00:28.298574Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+db_1     | 2022-09-02T02:00:28.298576Z 0 [Note] InnoDB: Using Linux native AIO
+db_1     | 2022-09-02T02:00:28.298957Z 0 [Note] InnoDB: Number of pools: 1
+db_1     | 2022-09-02T02:00:28.299121Z 0 [Note] InnoDB: Using CPU crc32 instructions
+db_1     | 2022-09-02T02:00:28.301667Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+db_1     | 2022-09-02T02:00:28.310509Z 0 [Note] InnoDB: Completed initialization of buffer pool
+db_1     | 2022-09-02T02:00:28.313823Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+db_1     | 2022-09-02T02:00:28.326581Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+db_1     | 2022-09-02T02:00:28.339036Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+db_1     | 2022-09-02T02:00:28.339160Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+db_1     | 2022-09-02T02:00:28.356762Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+db_1     | 2022-09-02T02:00:28.358731Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:00:28.358830Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:00:28.360616Z 0 [Note] InnoDB: 5.7.39 started; log sequence number 2754908
+db_1     | 2022-09-02T02:00:28.360801Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db_1     | 2022-09-02T02:00:28.361137Z 0 [Note] Plugin 'FEDERATED' is disabled.
+db_1     | 2022-09-02T02:00:28.362347Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220902  2:00:28
+db_1     | 2022-09-02T02:00:28.368336Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+db_1     | 2022-09-02T02:00:28.368388Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+db_1     | 2022-09-02T02:00:28.368394Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:28.368395Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:28.368894Z 0 [Warning] CA certificate ca.pem is self signed.
+db_1     | 2022-09-02T02:00:28.368955Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+db_1     | 2022-09-02T02:00:28.371872Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1     | 2022-09-02T02:00:28.379223Z 0 [Note] Event Scheduler: Loaded 0 events
+db_1     | 2022-09-02T02:00:28.380469Z 0 [Note] mysqld: ready for connections.
+db_1     | Version: '5.7.39'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server (GPL)
+db_1     | 2022-09-02 02:00:29+00:00 [Note] [Entrypoint]: Temporary server started.
+db_1     | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+db_1     | Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+db_1     | Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+db_1     | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+db_1     | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02 02:00:31+00:00 [Note] [Entrypoint]: Creating database yw
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02 02:00:31+00:00 [Note] [Entrypoint]: Creating user user
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02 02:00:31+00:00 [Note] [Entrypoint]: Giving user user access to schema yw
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     |
+db_1     | 2022-09-02 02:00:31+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+db_1     | mysql: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+yw_app_web_1 exited with code 1
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+db_1     |
+db_1     |
+db_1     | 2022-09-02 02:00:32+00:00 [Note] [Entrypoint]: Stopping temporary server
+db_1     | mysqladmin: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:00:32.965526Z 0 [Note] Giving 0 client threads a chance to die gracefully
+db_1     | 2022-09-02T02:00:32.965568Z 0 [Note] Shutting down slave threads
+db_1     | 2022-09-02T02:00:32.965578Z 0 [Note] Forcefully disconnecting 0 remaining clients
+db_1     | 2022-09-02T02:00:32.965582Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+db_1     | 2022-09-02T02:00:32.965641Z 0 [Note] Binlog end
+db_1     | 2022-09-02T02:00:32.966244Z 0 [Note] Shutting down plugin 'ngram'
+db_1     | 2022-09-02T02:00:32.966277Z 0 [Note] Shutting down plugin 'partition'
+db_1     | 2022-09-02T02:00:32.966281Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+db_1     | 2022-09-02T02:00:32.966284Z 0 [Note] Shutting down plugin 'ARCHIVE'
+db_1     | 2022-09-02T02:00:32.966285Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+db_1     | 2022-09-02T02:00:32.966316Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+db_1     | 2022-09-02T02:00:32.966318Z 0 [Note] Shutting down plugin 'MyISAM'
+db_1     | 2022-09-02T02:00:32.966327Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+db_1     | 2022-09-02T02:00:32.966329Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+db_1     | 2022-09-02T02:00:32.966330Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+db_1     | 2022-09-02T02:00:32.966331Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+db_1     | 2022-09-02T02:00:32.966331Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+db_1     | 2022-09-02T02:00:32.966332Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+db_1     | 2022-09-02T02:00:32.966333Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+db_1     | 2022-09-02T02:00:32.966334Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+db_1     | 2022-09-02T02:00:32.966335Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+db_1     | 2022-09-02T02:00:32.966336Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+db_1     | 2022-09-02T02:00:32.966337Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+db_1     | 2022-09-02T02:00:32.966338Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+db_1     | 2022-09-02T02:00:32.966338Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+db_1     | 2022-09-02T02:00:32.966339Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+db_1     | 2022-09-02T02:00:32.966340Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+db_1     | 2022-09-02T02:00:32.966341Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+db_1     | 2022-09-02T02:00:32.966342Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+db_1     | 2022-09-02T02:00:32.966343Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+db_1     | 2022-09-02T02:00:32.966344Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+db_1     | 2022-09-02T02:00:32.966345Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+db_1     | 2022-09-02T02:00:32.966346Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+db_1     | 2022-09-02T02:00:32.966347Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+db_1     | 2022-09-02T02:00:32.966348Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+db_1     | 2022-09-02T02:00:32.966349Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+db_1     | 2022-09-02T02:00:32.966350Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+db_1     | 2022-09-02T02:00:32.966351Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+db_1     | 2022-09-02T02:00:32.966352Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+db_1     | 2022-09-02T02:00:32.966353Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+db_1     | 2022-09-02T02:00:32.966354Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+db_1     | 2022-09-02T02:00:32.966356Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+db_1     | 2022-09-02T02:00:32.966357Z 0 [Note] Shutting down plugin 'InnoDB'
+db_1     | 2022-09-02T02:00:32.966435Z 0 [Note] InnoDB: FTS optimize thread exiting.
+db_1     | 2022-09-02T02:00:32.966617Z 0 [Note] InnoDB: Starting shutdown...
+db_1     | 2022-09-02T02:00:33.067315Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+db_1     | 2022-09-02T02:00:33.067913Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 220902  2:00:33
+yw_app_web_1 exited with code 1
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+db_1     | 2022-09-02T02:00:34.397272Z 0 [Note] InnoDB: Shutdown completed; log sequence number 13624084
+db_1     | 2022-09-02T02:00:34.399958Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+db_1     | 2022-09-02T02:00:34.400045Z 0 [Note] Shutting down plugin 'MEMORY'
+db_1     | 2022-09-02T02:00:34.400056Z 0 [Note] Shutting down plugin 'CSV'
+db_1     | 2022-09-02T02:00:34.400060Z 0 [Note] Shutting down plugin 'sha256_password'
+db_1     | 2022-09-02T02:00:34.400063Z 0 [Note] Shutting down plugin 'mysql_native_password'
+db_1     | 2022-09-02T02:00:34.400225Z 0 [Note] Shutting down plugin 'binlog'
+db_1     | 2022-09-02T02:00:34.401472Z 0 [Note] mysqld: Shutdown complete
+db_1     |
+db_1     | 2022-09-02 02:00:34+00:00 [Note] [Entrypoint]: Temporary server stopped
+db_1     |
+db_1     | 2022-09-02 02:00:34+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+db_1     |
+db_1     | mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:00:35.147401Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db_1     | 2022-09-02T02:00:35.148469Z 0 [Note] mysqld (mysqld 5.7.39) starting as process 1 ...
+db_1     | 2022-09-02T02:00:35.150868Z 0 [Note] InnoDB: PUNCH HOLE support available
+db_1     | 2022-09-02T02:00:35.150928Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1     | 2022-09-02T02:00:35.150946Z 0 [Note] InnoDB: Uses event mutexes
+db_1     | 2022-09-02T02:00:35.150952Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+db_1     | 2022-09-02T02:00:35.150954Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+db_1     | 2022-09-02T02:00:35.150967Z 0 [Note] InnoDB: Using Linux native AIO
+db_1     | 2022-09-02T02:00:35.151124Z 0 [Note] InnoDB: Number of pools: 1
+db_1     | 2022-09-02T02:00:35.151227Z 0 [Note] InnoDB: Using CPU crc32 instructions
+db_1     | 2022-09-02T02:00:35.152739Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+db_1     | 2022-09-02T02:00:35.157944Z 0 [Note] InnoDB: Completed initialization of buffer pool
+db_1     | 2022-09-02T02:00:35.160130Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+db_1     | 2022-09-02T02:00:35.172185Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+db_1     | 2022-09-02T02:00:35.181299Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+db_1     | 2022-09-02T02:00:35.181397Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+db_1     | 2022-09-02T02:00:35.195305Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+db_1     | 2022-09-02T02:00:35.196314Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:00:35.196417Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:00:35.198001Z 0 [Note] InnoDB: 5.7.39 started; log sequence number 13624084
+db_1     | 2022-09-02T02:00:35.198361Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db_1     | 2022-09-02T02:00:35.198663Z 0 [Note] Plugin 'FEDERATED' is disabled.
+db_1     | 2022-09-02T02:00:35.200126Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220902  2:00:35
+db_1     | 2022-09-02T02:00:35.204418Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+db_1     | 2022-09-02T02:00:35.204460Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+db_1     | 2022-09-02T02:00:35.204466Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:35.204467Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:00:35.204938Z 0 [Warning] CA certificate ca.pem is self signed.
+db_1     | 2022-09-02T02:00:35.205003Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+db_1     | 2022-09-02T02:00:35.205228Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+db_1     | 2022-09-02T02:00:35.205292Z 0 [Note] IPv6 is available.
+db_1     | 2022-09-02T02:00:35.205306Z 0 [Note]   - '::' resolves to '::';
+db_1     | 2022-09-02T02:00:35.205385Z 0 [Note] Server socket created on IP: '::'.
+db_1     | 2022-09-02T02:00:35.207757Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1     | 2022-09-02T02:00:35.213757Z 0 [Note] Event Scheduler: Loaded 0 events
+db_1     | 2022-09-02T02:00:35.214558Z 0 [Note] mysqld: ready for connections.
+db_1     | Version: '5.7.39'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+yw_app_web_1 exited with code 1
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+yw_app_web_1 exited with code 1
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+yw_app_web_1 exited with code 1
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+web_1    | exec /var/www/html/myproject/start.sh: no such file or directory
+Stopping yw_app_nginx_1 ...
+Stopping yw_app_web_1   ...
+Stopping yw_app_db_1    ...
+Stopping yw_app_nginx_1 ... done
+Stopping yw_app_web_1   ... done
+Stopping yw_app_db_1    ... done
+Gracefully stopping... (press Ctrl+C again to force)
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ pwd
+/c/Users/Reed/yw_app
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker ps -a
+CONTAINER ID   IMAGE               COMMAND                  CREATED              STATUS                          PORTS     NAMES
+c0e63e6366aa   yw_app_nginx        "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             yw_app_nginx_1
+562a680fc26f   yw_app_web          "/var/www/html/mypro…"   About a minute ago   Exited (1) About a minute ago             yw_app_web_1
+f4950197bb04   mysql:5.7           "docker-entrypoint.s…"   About a minute ago   Exited (0) About a minute ago             yw_app_db_1
+ed6c10efeea5   docker101tutorial   "/docker-entrypoint.…"   42 hours ago         Exited (0) 11 minutes ago                 docker-tutorial
+8b359dccd6e2   alpine/git          "git clone https://g…"   42 hours ago         Exited (0) 42 hours ago                   repo
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it yw_app_web bash
+Error: No such container: yw_app_web
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it yw_app_web_1 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker run yw_app_web_1
+Unable to find image 'yw_app_web_1:latest' locally
+
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker start yw_app_web_1
+yw_app_web_1
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it yw_app_web_1 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ dpcler [s
+bash: dpcler: command not found
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ dpcler ps
+bash: dpcler: command not found
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED         STATUS                         PORTS     NAMES
+562a680fc26f   yw_app_web   "/var/www/html/mypro…"   2 minutes ago   Restarting (1) 2 seconds ago             yw_app_web_1
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED         STATUS                          PORTS     NAMES
+562a680fc26f   yw_app_web   "/var/www/html/mypro…"   4 minutes ago   Restarting (1) 35 seconds ago             yw_app_web_1
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose build
+db uses an image, skipping
+Building web
+#1 [internal] load build definition from Dockerfile
+#1 sha256:4e3f4d735e4306d32616e831167e3e9ac0e9f0e9931caaaa769093d3076e34e0
+#1 transferring dockerfile: 32B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:a47a0dba9a14af3e2c823c7e8618afaaf4398297e3398f24ec0d550e2722e66f
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 sha256:5b45ae08bd8357fe1f769963376b8b8d0b22c54a9a59f4e3577f49866f2fb9b9
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 DONE 2.6s
+
+#5 [1/7] FROM docker.io/library/python:3.7@sha256:8b743b1af852e554b98e2377f9c92221693225b85d984b23be6b033018f97cc3
+#5 sha256:bc5bbe979f8a6e30b178bd3137a5ecbd21d601f9db08428124a7abf5b439a422
+#5 DONE 0.0s
+
+#8 [internal] load build context
+#8 sha256:c6a171bb0613af6da45f4aa15e776bba73139b4b0f92ea47006c0f5b2f704258
+#8 transferring context: 16.98kB 0.0s done
+#8 DONE 0.0s
+
+#7 [3/7] WORKDIR /var/www/html/myproject
+#7 sha256:e5a5178fda98817fb45b23a438eb6f83dc3337e4450fbd13b352a87c86fd5221
+#7 CACHED
+
+#9 [4/7] ADD . /var/www/html/myproject
+#9 sha256:5394e86828b6c32d7c932246e639b5248ef379a8973d205604218b168f0b1b44
+#9 CACHED
+
+#6 [2/7] RUN mkdir -p /var/www/html/myproject
+#6 sha256:6b909ac625ab2189b22b598b871abfe76912566ba34d63ed845084116ee05be2
+#6 CACHED
+
+#10 [5/7] RUN /usr/local/bin/python -m pip install --upgrade pip
+#10 sha256:0c3ad99687b2eda4cc65151ee719a12b4e3fae2d64a33848a7cc47af6c15aa92
+#10 CACHED
+
+#11 [6/7] RUN pip install -r requirements.txt
+#11 sha256:2c302316e5286bdad024bd2d861b93b60a792019ba1940d9079f9a91a2702cf1
+#11 CACHED
+
+#12 [7/7] RUN chmod +x ./start.sh
+#12 sha256:558173d241c093f847df2be5e7c480599e13c5192d34f54097e8c3c63fec882b
+#12 CACHED
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers done
+#13 writing image sha256:373d751982ceb32d0591ec58b8b81f5e0663bb4b22851e99d20821d17cfd3ca3
+#13 writing image sha256:373d751982ceb32d0591ec58b8b81f5e0663bb4b22851e99d20821d17cfd3ca3 done
+#13 naming to docker.io/library/yw_app_web done
+#13 DONE 0.0s
+Building nginx
+#1 [internal] load build definition from Dockerfile
+#1 sha256:c075d14ce6c3173fd4a600ad1023d04fe6b9692090405b19733852a81939be66
+#1 transferring dockerfile: 32B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:40784b3fe7cf0279b220d5da6d8702c14ec5e85aed54d64b2cac69a71e95eee9
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:latest
+#3 sha256:06c466a4eb6821b81bd3e48610e5f38dab858b1e9acb01d6e2f6b11c8fabe6bc
+#3 ...
+
+#4 [auth] library/nginx:pull token for registry-1.docker.io
+#4 sha256:5f6a38cc4ef10f8c1290b77dbdba77bd569328f98174f1cce61ad0875428ddff
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:latest
+#3 sha256:06c466a4eb6821b81bd3e48610e5f38dab858b1e9acb01d6e2f6b11c8fabe6bc
+#3 DONE 2.2s
+
+#9 [1/4] FROM docker.io/library/nginx:latest@sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f
+#9 sha256:dd5d068554df17a55961f4388b19821ec36c367c1e861860a267678135ddb6dd
+#9 DONE 0.0s
+
+#7 [internal] load build context
+#7 sha256:d8c1e49602ffe3413241627396328384aae9e17ca76b5f1496ff7a85c599af2b
+#7 transferring context: 32B done
+#7 DONE 0.0s
+
+#5 [2/4] RUN rm /etc/nginx/conf.d/default.conf && mkdir -p /usr/share/nginx/html/static && mkdir -p /usr/share/nginx/html/media && mkdir -p /usr/share/nginx/ssl
+#5 sha256:23dfcc0b23afdff926263576a4e6a6f204b1dac805f27f9c11d662de7b8f0d9e
+#5 CACHED
+
+#6 [3/4] RUN chown -R www-data:www-data /usr/share/nginx/html/media && chmod -R 775 /usr/share/nginx/html/media
+#6 sha256:890d397b163824ccf4a1b68b1f27718ccaab877cd408e2591f5ebdd958244859
+#6 CACHED
+
+#8 [4/4] ADD ./nginx.conf /etc/nginx/conf.d/
+#8 sha256:f6ac9de6045aecdcbf11f0f369248b0a37c3735628affed88f4978f0c1d1eb70
+#8 CACHED
+
+#10 exporting to image
+#10 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#10 exporting layers done
+#10 writing image sha256:cf5fa4b527cfbdf344dc32a234a22d234cc284caad12dc87c137cad7ddd539cf done
+#10 naming to docker.io/library/yw_app_nginx done
+#10 DONE 0.0s
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose up
+Recreating yw_app_db_1 ...
+Recreating yw_app_db_1 ... done
+Recreating yw_app_web_1 ...
+Recreating yw_app_web_1 ... done
+Recreating yw_app_nginx_1 ...
+Recreating yw_app_nginx_1 ... done
+Attaching to yw_app_db_1, yw_app_web_1, yw_app_nginx_1
+db_1     | 2022-09-02 02:05:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+db_1     | 2022-09-02 02:05:58+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db_1     | 2022-09-02 02:05:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+db_1     | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+db_1     | mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:05:59.205673Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db_1     | 2022-09-02T02:05:59.206960Z 0 [Note] mysqld (mysqld 5.7.39) starting as process 1 ...
+db_1     | 2022-09-02T02:05:59.209508Z 0 [Note] InnoDB: PUNCH HOLE support available
+db_1     | 2022-09-02T02:05:59.209555Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1     | 2022-09-02T02:05:59.209559Z 0 [Note] InnoDB: Uses event mutexes
+db_1     | 2022-09-02T02:05:59.209561Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+db_1     | 2022-09-02T02:05:59.209563Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+db_1     | 2022-09-02T02:05:59.209565Z 0 [Note] InnoDB: Using Linux native AIO
+db_1     | 2022-09-02T02:05:59.209732Z 0 [Note] InnoDB: Number of pools: 1
+db_1     | 2022-09-02T02:05:59.209836Z 0 [Note] InnoDB: Using CPU crc32 instructions
+db_1     | 2022-09-02T02:05:59.212404Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+db_1     | 2022-09-02T02:05:59.219965Z 0 [Note] InnoDB: Completed initialization of buffer pool
+nginx_1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_1  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf is not a file or does not exist
+web_1    | Python 3.7.13 (default, Aug 23 2022, 10:02:06)
+web_1    | [GCC 10.2.1 20210110] on linux
+web_1    | Type "help", "copyright", "credits" or "license" for more information.
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+db_1     | 2022-09-02T02:05:59.222981Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+db_1     | 2022-09-02T02:05:59.235056Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+db_1     | 2022-09-02T02:05:59.247187Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+db_1     | 2022-09-02T02:05:59.247289Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+nginx_1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+db_1     | 2022-09-02T02:05:59.263759Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+db_1     | 2022-09-02T02:05:59.264247Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:05:59.264292Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:05:59.265915Z 0 [Note] InnoDB: 5.7.39 started; log sequence number 13653753
+db_1     | 2022-09-02T02:05:59.267392Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db_1     | 2022-09-02T02:05:59.267720Z 0 [Note] Plugin 'FEDERATED' is disabled.
+db_1     | 2022-09-02T02:05:59.270737Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220902  2:05:59
+db_1     | 2022-09-02T02:05:59.274200Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+db_1     | 2022-09-02T02:05:59.274244Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+db_1     | 2022-09-02T02:05:59.274249Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:05:59.274250Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:05:59.274680Z 0 [Warning] CA certificate ca.pem is self signed.
+db_1     | 2022-09-02T02:05:59.274743Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+db_1     | 2022-09-02T02:05:59.274981Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+db_1     | 2022-09-02T02:05:59.275156Z 0 [Note] IPv6 is available.
+db_1     | 2022-09-02T02:05:59.275193Z 0 [Note]   - '::' resolves to '::';
+db_1     | 2022-09-02T02:05:59.275219Z 0 [Note] Server socket created on IP: '::'.
+db_1     | 2022-09-02T02:05:59.278188Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1     | 2022-09-02T02:05:59.283334Z 0 [Note] Event Scheduler: Loaded 0 events
+db_1     | 2022-09-02T02:05:59.283622Z 0 [Note] mysqld: ready for connections.
+db_1     | Version: '5.7.39'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+Stopping yw_app_nginx_1   ...
+Stopping yw_app_web_1     ...
+Stopping yw_app_db_1      ...
+Stopping yw_app_nginx_1   ... done
+Stopping yw_app_web_1     ... done
+Stopping yw_app_db_1      ... done
+Gracefully stopping... (press Ctrl+C again to force)
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose up -d
+Starting yw_app_db_1 ...
+Starting yw_app_db_1 ... done
+Starting yw_app_web_1 ...
+Starting yw_app_web_1 ... done
+Starting yw_app_nginx_1 ...
+Starting yw_app_nginx_1 ... done
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it yw_app_web_1 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec yw_app_web_1 bash
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ ls
+docker-compose.yaml  mysql/  nginx/  uwsgi/  web/
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -i yw_app_web_1 bash
+
+ls
+Dockerfile
+__init__.py
+app
+manage.py
+requirements.txt
+start.sh
+static
+statistics_files
+templates
+uwsgi.ini
+yw_app
+
+bash start.sh
+start.sh: line 2: $'\r': command not found
+start.sh: line 3: $'\r': command not found
+start.sh: line 4: $'\r': command not found
+System check identified some issues:
+
+WARNINGS:
+app.MoldData.times: (fields.E010) JSONField default should be a callable instead of an instance so that it's not shared between all field instances.
+        HINT: Use a callable instead, e.g., use `dict` instead of `{}`.
+System check identified some issues:
+
+WARNINGS:
+app.MoldData.times: (fields.E010) JSONField default should be a callable instead of an instance so that it's not shared between all field instances.
+        HINT: Use a callable instead, e.g., use `dict` instead of `{}`.
+Operations to perform:
+  Apply all migrations: admin, app, auth, contenttypes, sessions
+Running migrations:
+  Applying app.0015_auto_20220830_1324...No changes detected
+ OK
+  Applying app.0016_auto_20220830_1325... OK
+  Applying app.0017_auto_20220830_1327... OK
+  Applying app.0018_auto_20220830_1330... OK
+  Applying app.0019_auto_20220830_1334... OK
+  Applying app.0020_auto_20220830_1335... OK
+  Applying app.0021_auto_20220830_1336... OK
+  Applying app.0022_auto_20220830_1337... OK
+  Applying app.0023_auto_20220830_1339... OK
+  Applying app.0024_auto_20220830_1341... OK
+  Applying app.0025_auto_20220830_1343... OK
+  Applying app.0026_auto_20220830_1355... OK
+  Applying app.0027_auto_20220830_1411... OK
+  Applying app.0028_auto_20220830_1541... OK
+
+128 static files copied to '/var/www/html/myproject/static'.
+
+exit
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ vim uwsgi.ini
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ ls
+docker-compose.yaml  mysql/  nginx/  uwsgi/  web/
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -i yw_app_web_1 bash
+vim uwsgi.ini
+bash: line 1: vim: command not found
+apt update && apt install vim
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
+Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+Reading package lists...
+E: Unable to determine file size for fd 7 - fstat (2: No such file or directory)
+E: The repository 'http://deb.debian.org/debian bullseye InRelease' provides only weak security information.
+E: Unable to determine file size for fd 7 - fstat (2: No such file or directory)
+E: The repository 'http://deb.debian.org/debian-security bullseye-security InRelease' provides only weak security information.
+E: Unable to determine file size for fd 7 - fstat (2: No such file or directory)
+E: The repository 'http://deb.debian.org/debian bullseye-updates InRelease' provides only weak security information.
+
+bash: line 3: $'\E[A\E[B\E[A\E[A\E[B\E[B': command not found
+
+bash: line 5: $'\E[A\E[A': command not found
+
+
+
+
+bash: line 10: $'\E[A\E[A\E[B': command not found
+
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -i yw_app_web_1 bash
+uwsgi --ini uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+exit
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose down
+yaml.parser.ParserError: while parsing a block mapping
+  in ".\docker-compose.yaml", line 9, column 3
+expected <block end>, but found '<block mapping start>'
+  in ".\docker-compose.yaml", line 21, column 4
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose up
+Recreating yw_app_db_1 ...
+Recreating yw_app_db_1 ... done
+Recreating yw_app_web_1 ...
+Recreating yw_app_web_1 ... done
+Recreating yw_app_nginx_1 ...
+Recreating yw_app_nginx_1 ... done
+Attaching to yw_app_db_1, yw_app_web_1, yw_app_nginx_1
+db_1     | 2022-09-02 02:25:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+db_1     | 2022-09-02 02:25:12+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db_1     | 2022-09-02 02:25:12+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.39-1.el7 started.
+db_1     | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+db_1     | mysqld: [Warning] World-writable config file '/etc/mysql/my.cnf' is ignored.
+db_1     | 2022-09-02T02:25:12.361650Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db_1     | 2022-09-02T02:25:12.362771Z 0 [Note] mysqld (mysqld 5.7.39) starting as process 1 ...
+db_1     | 2022-09-02T02:25:12.365162Z 0 [Note] InnoDB: PUNCH HOLE support available
+db_1     | 2022-09-02T02:25:12.365219Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1     | 2022-09-02T02:25:12.365226Z 0 [Note] InnoDB: Uses event mutexes
+db_1     | 2022-09-02T02:25:12.365228Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+db_1     | 2022-09-02T02:25:12.365230Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+db_1     | 2022-09-02T02:25:12.365231Z 0 [Note] InnoDB: Using Linux native AIO
+db_1     | 2022-09-02T02:25:12.365391Z 0 [Note] InnoDB: Number of pools: 1
+db_1     | 2022-09-02T02:25:12.365494Z 0 [Note] InnoDB: Using CPU crc32 instructions
+nginx_1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+db_1     | 2022-09-02T02:25:12.366934Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+web_1    | Python 3.7.13 (default, Aug 23 2022, 10:02:06)
+web_1    | [GCC 10.2.1 20210110] on linux
+web_1    | Type "help", "copyright", "credits" or "license" for more information.
+nginx_1  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf is not a file or does not exist
+db_1     | 2022-09-02T02:25:12.372938Z 0 [Note] InnoDB: Completed initialization of buffer pool
+db_1     | 2022-09-02T02:25:12.375040Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx_1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+db_1     | 2022-09-02T02:25:12.386878Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+db_1     | 2022-09-02T02:25:12.401259Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+db_1     | 2022-09-02T02:25:12.401363Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+db_1     | 2022-09-02T02:25:12.415332Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+db_1     | 2022-09-02T02:25:12.415835Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:25:12.415881Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+db_1     | 2022-09-02T02:25:12.417199Z 0 [Note] InnoDB: 5.7.39 started; log sequence number 13660084
+db_1     | 2022-09-02T02:25:12.417365Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db_1     | 2022-09-02T02:25:12.417670Z 0 [Note] Plugin 'FEDERATED' is disabled.
+db_1     | 2022-09-02T02:25:12.422863Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220902  2:25:12
+db_1     | 2022-09-02T02:25:12.423906Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+db_1     | 2022-09-02T02:25:12.423937Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+db_1     | 2022-09-02T02:25:12.423943Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:25:12.423944Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db_1     | 2022-09-02T02:25:12.424433Z 0 [Warning] CA certificate ca.pem is self signed.
+db_1     | 2022-09-02T02:25:12.424488Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+db_1     | 2022-09-02T02:25:12.424697Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+db_1     | 2022-09-02T02:25:12.424863Z 0 [Note] IPv6 is available.
+db_1     | 2022-09-02T02:25:12.424898Z 0 [Note]   - '::' resolves to '::';
+db_1     | 2022-09-02T02:25:12.424922Z 0 [Note] Server socket created on IP: '::'.
+db_1     | 2022-09-02T02:25:12.428234Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1     | 2022-09-02T02:25:12.434350Z 0 [Note] Event Scheduler: Loaded 0 events
+db_1     | 2022-09-02T02:25:12.435764Z 0 [Note] mysqld: ready for connections.
+db_1     | Version: '5.7.39'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+Stopping yw_app_nginx_1   ...
+Stopping yw_app_web_1     ...
+Stopping yw_app_db_1      ...
+Stopping yw_app_nginx_1   ... done
+Stopping yw_app_web_1     ... done
+Stopping yw_app_db_1      ... done
+Gracefully stopping... (press Ctrl+C again to force)
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker-compose up -d
+Pulling phpmyadmin (phpmyadmin/phpmyadmin:)...
+latest: Pulling from phpmyadmin/phpmyadmin
+Digest: sha256:ae6dadd9cf3c158e42937788f7255fa820ea3daef0349226d8d43f32e76535e1
+Status: Downloaded newer image for phpmyadmin/phpmyadmin:latest
+Recreating yw_app_db_1 ...
+Recreating yw_app_db_1 ... done
+Creating yw_app_phpmyadmin_1 ...
+Recreating yw_app_web_1      ...
+Creating yw_app_phpmyadmin_1 ... done
+Recreating yw_app_web_1      ... done
+Recreating yw_app_nginx_1    ...
+Recreating yw_app_nginx_1    ... done
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                  NAMES
+41945545830c   yw_app_nginx            "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8000->80/tcp   yw_app_nginx_1
+7719a2700e12   yw_app_web              "python3"                2 minutes ago   Up 2 minutes   8888/tcp               yw_app_web_1
+a04858a2e652   phpmyadmin/phpmyadmin   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8888->80/tcp   yw_app_phpmyadmin_1
+cae1cf185021   mysql:5.7               "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   3306/tcp, 33060/tcp    yw_app_db_1
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it *web* bash
+Error: No such container: web
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -it yw_app_web_1 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$ docker exec -i yw_app_web_1 bash
+bash start.sh
+start.sh: line 2: $'\r': command not found
+start.sh: line 3: $'\r': command not found
+start.sh: line 4: $'\r': command not found
+ failed: No such file or directory [core/utils.c line 3654]
+
+0 static files copied to '/var/www/html/myproject/static', 128 unmodified.
+System check identified some issues:
+
+WARNINGS:
+app.MoldData.times: (fields.E010) JSONField default should be a callable instead of an instance so that it's not shared between all field instances.
+        HINT: Use a callable instead, e.g., use `dict` instead of `{}`.
+System check identified some issues:
+
+WARNINGS:
+app.MoldData.times: (fields.E010) JSONField default should be a callable instead of an instance so that it's not shared between all field instances.
+        HINT: Use a callable instead, e.g., use `dict` instead of `{}`.
+Operations to perform:
+  Apply all migrations: admin, app, auth, contenttypes, sessions
+No changes detected
+Running migrations:
+  No migrations to apply.
+uwsgi --ini uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+python manage.py createsuperuser
+System check identified some issues:
+
+WARNINGS:
+app.MoldData.times: (fields.E010) JSONField default should be a callable instead of an instance so that it's not shared between all field instances.
+        HINT: Use a callable instead, e.g., use `dict` instead of `{}`.
+Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.
+
+
+Reed@DESKTOP-GDOC3R8 MINGW64 ~/yw_app (master)
+$

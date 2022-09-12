@@ -82,7 +82,7 @@ def make_excel(token):
 
     workbook.close()
 
-
+# 
 def main(token):
     token_path = f'statistics_files/{token}/'
     # os.chdir(token_path)
@@ -150,7 +150,7 @@ def main(token):
     mold = result1.index.values.tolist()
     x = np.arange(len(mold))
     result1.apply(pd.to_numeric).plot(kind='bar', stacked=True)
-    plt.xticks(x, mold, rotation=60)
+    plt.xticks(x, mold, rotation=45)
     plt.xlabel('Mold', fontsize='14')
     plt.ylabel('Time(hr)', fontsize='14')
     plt.title('Mold work time analysis', fontweight='bold', fontsize='20')

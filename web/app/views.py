@@ -35,7 +35,7 @@ def allWorks_view(request):
             for staff in staffs:
                 unm = len(MoldData.objects.filter(staff=staff).exclude(status=1))
                 staff.unm = unm
-            return render(request, 'myWork.html', {
+            return render(request, 'allWork.html', {
                 'staffs': staffs,
                 'nav': 2
             })
