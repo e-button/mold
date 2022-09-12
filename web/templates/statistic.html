@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<form style="width: 50%; margin: auto; margin-top: 2%">
+    <div class="form-group">
+        <input class="btn btn-primary" onclick="location.href='/statistics/download?id={{ s.id }}&type=excel';" type="button" id="stop" value="下載excel">
+    </div>
+    <div class="form-group">
+        <input class="btn btn-danger" onclick="deleteS('{{ s.id }}')" type="button" id="stop" value="刪除統計">
+    </div>
+  <div class="form-group">
+    <label>生成時間：</label>
+    <input type="text" class="form-control" value="{{ s.create_time }}" disabled>
+  </div>
+  <div class="form-group">
+      <img src="/statistics/download?id={{ s.id }}&type=image&order=1" class="img-fluid">
+  </div>
+  <div class="form-group">
+    <img src="/statistics/download?id={{ s.id }}&type=image&order=2" class="img-fluid">
+  </div>
+  <div class="form-group">
+    <img src="/statistics/download?id={{ s.id }}&type=image&order=3" class="img-fluid">
+  </div>
+</form>
+
+<script>
+    function deleteS(id) {
+        let flag = confirm('您確定要刪除這份數據統計？')
+        if (flag) {
+            $.ajax({
+                url: '/statistics/delete',
+                type: 'post',
+                data: { id },
+                success: (res)=>{
+                    let code = res.code
+                    let msg = res.msg
+                    alert(msg)
+                    if (code) {
+                        location.href = '/statistics/'
+                    }
+                }
+            })
+        }
+    }
+</script>
+{% endblock %}

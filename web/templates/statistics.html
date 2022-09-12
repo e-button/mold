@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div style="width: 50%; margin: auto; margin-top: 2%">
+        <input class="btn btn-primary" type="button" id="generate" value="生成報表">
+    </div>
+    <table style="width: 50%; margin: auto; margin-top: 2%" class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">生成日期</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in ss %}
+        <tr style="cursor: pointer" onclick="location.href='/statistics/{{ s.id }}'">
+          <th scope="row">{{ s.id }}</th>
+          <td>{{ s.create_time }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<script>
+    $('#generate').click(()=>{
+        $.ajax({
+            beforeSend: function () {
+                 $('#loading').css("display", "");
+              },
+            url: '/statistics/generate',
+            type: 'post',
+            success: (res)=>{
+                let code = res.code
+                let msg = res.msg
+                alert(msg)
+                if (code) {
+                    location.reload()
+                }
+            },
+            complete: function () {
+                setTimeout(function () { $('#loading').css("display", "none"); }, 3000);
+            }
+        })
+    })
+</script>
+{% endblock %}
