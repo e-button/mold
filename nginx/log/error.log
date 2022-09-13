@@ -2164,3 +2164,26 @@
 2022/09/11 12:32:28 [notice] 1#1: start worker process 37
 2022/09/11 12:32:29 [error] 22#22: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /doWork HTTP/1.1", upstream: "uwsgi://172.18.0.3:8888", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/doWork"
 2022/09/11 12:33:50 [error] 23#23: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET /doWork HTTP/1.1", upstream: "uwsgi://172.18.0.3:8888", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/doWork"
+2022/09/13 09:21:21 [notice] 1#1: using the "epoll" event method
+2022/09/13 09:21:21 [notice] 1#1: nginx/1.23.1
+2022/09/13 09:21:21 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/09/13 09:21:21 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/09/13 09:21:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/09/13 09:21:21 [notice] 1#1: start worker processes
+2022/09/13 09:21:21 [notice] 1#1: start worker process 22
+2022/09/13 09:21:21 [notice] 1#1: start worker process 23
+2022/09/13 09:21:21 [notice] 1#1: start worker process 24
+2022/09/13 09:21:21 [notice] 1#1: start worker process 25
+2022/09/13 09:21:21 [notice] 1#1: start worker process 26
+2022/09/13 09:21:21 [notice] 1#1: start worker process 27
+2022/09/13 09:21:21 [notice] 1#1: start worker process 28
+2022/09/13 09:21:21 [notice] 1#1: start worker process 29
+2022/09/13 09:21:21 [notice] 1#1: start worker process 30
+2022/09/13 09:21:21 [notice] 1#1: start worker process 31
+2022/09/13 09:21:21 [notice] 1#1: start worker process 32
+2022/09/13 09:21:21 [notice] 1#1: start worker process 33
+2022/09/13 09:21:21 [notice] 1#1: start worker process 34
+2022/09/13 09:21:21 [notice] 1#1: start worker process 35
+2022/09/13 09:21:21 [notice] 1#1: start worker process 36
+2022/09/13 09:21:21 [notice] 1#1: start worker process 37
+2022/09/13 09:23:19 [error] 22#22: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: localhost, request: "GET /doWork HTTP/1.1", upstream: "uwsgi://172.19.0.4:8888", host: "127.0.0.1:8000", referrer: "http://127.0.0.1:8000/doWork"

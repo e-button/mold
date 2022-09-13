@@ -13,7 +13,7 @@
   <div class="form-group">
     <label for="machine_id">機台編號：</label>
     <select class="form-control" id="machine_id">
-        <option class="drop-down" selected disabled>---請選擇---</option>
+        <option class="drop-down" hidden>---請選擇---</option>
           {% for machine in machines %}
               <option class="drop-down" value="{{ machine.id }}">{{ machine.no }}</option>
           {% endfor %}

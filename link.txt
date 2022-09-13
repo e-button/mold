@@ -1,0 +1,4 @@
+報工系統:http://127.0.0.1:8000/doWork
+Django管理:http://127.0.0.1:8000/admin/
+phpMyAdmin:http://127.0.0.1:8888/index.php
+root/root
