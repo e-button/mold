@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<form style="width: 50%; margin: auto; margin-top: 2%">
+<body style="width: 50%; margin: auto; margin-top: 2%; margin-bottom: 2%;">
   <div class="form-group">
     <label for="staff_id">員工編號：</label>
     <select class="form-control" id="staff_id">
@@ -30,11 +30,11 @@
   </div>
   <div class="form-group">
       <label for="process_id">模具編號：</label>
-      <input type="text" class="form-control" id="mod_no">
+      <input type="text" class="form-control" id="mod_no" size="10">
   </div>
   &emsp;<input class="btn btn-primary" type="button" id="submit" value="報工">
    <input class="btn btn-primary" type="button" value="重新整理" onClick="history.go(0);">
-</form>
+</body>
 <script>
     $('#submit').click(()=>{
         let staff_id = $('#staff_id').val()
